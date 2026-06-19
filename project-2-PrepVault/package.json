@@ -1,0 +1,32 @@
+{
+  "name": "prepvault",
+  "version": "1.0.0",
+  "description": "A personal interview prep web app for grad students",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "interview-prep",
+    "mongodb",
+    "express",
+    "javascript"
+  ],
+  "author": "Neeraja & Keshvi",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
+}
