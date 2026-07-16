@@ -1,4 +1,4 @@
-# Natyakosha Design Document 🎨
+# Natyakosha Design Document 
 
 ## 1. Project Description
 
