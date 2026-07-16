@@ -1,0 +1,126 @@
+/* TeacherFees Component Styling */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 0;
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem 0;
+}
+
+.stat-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.border-success {
+  border-color: rgba(16, 185, 129, 0.4);
+}
+.border-warning {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+.border-danger {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.text-success {
+  color: var(--status-online);
+}
+.text-warning {
+  color: var(--status-loading);
+}
+.text-danger {
+  color: var(--status-offline);
+}
+
+/* Custom Tables */
+.table-container {
+  overflow-x: auto;
+  max-height: 400px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.custom-table th {
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.custom-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.custom-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.table-sm th,
+.table-sm td {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.status-pill {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.status-pill.paid {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--status-online);
+}
+
+.status-pill.unpaid {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--status-offline);
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}

@@ -1,0 +1,164 @@
+/* LearningArea Component Styling */
+.learning-area {
+  width: 100%;
+}
+
+.tab-navigation {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Grid Layouts */
+.grid-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.theory-grid {
+  grid-template-columns: 1fr;
+}
+
+.mudra-grid,
+.adavu-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Card Styling Inside Grid */
+.theory-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theory-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 5px 15px var(--primary-glow);
+}
+
+.theory-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+
+.description-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+.expand-indicator {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+/* Mudra card */
+.mudra-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image-container {
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+
+.mudra-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mudra-card:hover .mudra-img {
+  transform: scale(1.05);
+}
+
+.card-details {
+  padding: 1.25rem;
+  flex-grow: 1;
+}
+
+.card-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.card-details p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Adavu card */
+.adavu-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border-color);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

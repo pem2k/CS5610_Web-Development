@@ -1,0 +1,134 @@
+/* TeacherAttendance Component Styling */
+.register-setup-card {
+  padding: 1.25rem;
+}
+
+.setup-controls {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .setup-controls {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.register-sheet-card {
+  margin-top: 1.5rem;
+}
+
+.sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sheet-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.sheet-date {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.attendance-table-container {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th {
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.attendance-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.attendance-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.student-name-cell {
+  font-weight: 500;
+}
+
+/* Styled radio inputs */
+.radio-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-label input {
+  display: none;
+}
+
+.custom-radio {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.present-radio:hover,
+.radio-label input:checked + .present-radio {
+  border-color: var(--status-online);
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.radio-label input:checked + .present-radio::after {
+  content: "✓";
+  color: var(--status-online);
+  font-weight: 900;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.absent-radio:hover,
+.radio-label input:checked + .absent-radio {
+  border-color: var(--status-offline);
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.radio-label input:checked + .absent-radio::after {
+  content: "✕";
+  color: var(--status-offline);
+  font-weight: 900;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sheet-actions {
+  display: flex;
+  justify-content: flex-end;
+}
