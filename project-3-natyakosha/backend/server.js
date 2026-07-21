@@ -19,6 +19,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Session setup
+// One thing you might do here intead of the fallback in server.js is setting the fallback in the env variable
+// if there's no session secret set on live then the fallback could be visible and become a security risk
 app.use(
   session({
     secret: process.env.SESSION_SECRET || "natyakosha_fallback_secret",
