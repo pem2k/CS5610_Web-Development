@@ -44,6 +44,9 @@ router.post("/register", async (req, res) => {
 });
 
 // POST /api/auth/login
+// Looks like this route returns the entire user object including the pw hash
+// You can use the same userSafe pattern as above, or you can create a helper that returns a 
+// safe version of the user
 router.post("/login", (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) {
