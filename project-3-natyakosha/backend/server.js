@@ -74,7 +74,11 @@ connectDB()
       "Critical: Failed to start server due to database connection issue",
       err,
     );
-  });const express = require("express");
+  });
+//Duplicated Code here, multiple const calls and re-runs will probably cause crashes.
+/*
+const express = require("express");
+
 const session = require("express-session");
 const passport = require("./config/passport");
 const authRoutes = require("./routes/auth");
@@ -151,3 +155,4 @@ connectDB()
       err,
     );
   });
+*/
