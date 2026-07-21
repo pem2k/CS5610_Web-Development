@@ -8,6 +8,9 @@ import TeacherFees from "./components/TeacherFees";
 import StudentDashboard from "./components/StudentDashboard";
 import "./App.css";
 
+// Instead of state based navigation you could heavily simplify this with react router and
+// separated components/pages 
+
 function App() {
   const [user, setUser] = useState(null);
   const [checkingAuth, setCheckingAuth] = useState(true);
