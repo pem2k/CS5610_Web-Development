@@ -155,6 +155,11 @@ router.post("/create-student", isTeacher, async (req, res) => {
   }
 
   try {
+    // I'd be really careful about using regex like this, or at least make sure there's
+    // some character escaping and validation on the backend, as things stand
+    // this allows regex injection. There's a way to do this without regex, in mongo
+    // called collation which is basically a string comparator that allows case/character insensitive searches
+    // and doesnt expose your db this way: https://www.mongodb.com/docs/manual/reference/collation/
     const db = getDB();
     const cleanUsername = username.toLowerCase().trim();
     const cleanFirstName = firstName.trim();
